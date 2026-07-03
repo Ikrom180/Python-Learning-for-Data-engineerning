@@ -7,7 +7,8 @@ capitals = {"USA": "Washingtion D.C",
             "Russia": "Moscow"}
 
 # print(dir(capitals))
-# print(capitals.values())
+# print(capitals.values()) # it will return array
+
 # print(capitals.get("China"))  #Japan
 # print(capitals.get("Russia"))  #None
 
@@ -17,7 +18,23 @@ capitals = {"USA": "Washingtion D.C",
 #     print("That capital does not exist")
 
 
-capitals.update({"China": "New Delhi"}) # update
-capitals.update({"Usa": "Detroit"}) # you can add item with upage function
+# capitals.update({"China": "New Delhi"}) # update
+# capitals.update({"Usa": "Detroit"}) # you can add item with upage function
 
-print(capitals)
+# capitals.pop("China") # it will remove china key and value
+# capitals.popitem() # this will remove last value from dictionary
+
+
+# keys = capitals.keys() # it will return lists of keys these are iterable
+# for key in keys:
+#     print(f"{key}: {capitals[key]}")
+# print(keys) # dict_keys(['USA',....])
+
+# or we can write like this
+
+#for value in capitals.values(): # This is key
+#      print(value)
+
+# capitals.clear()
+# print(capitals)
+
