@@ -32,9 +32,24 @@ capitals = {"USA": "Washingtion D.C",
 
 # or we can write like this
 
-#for value in capitals.values(): # This is key
+# print(capitals.values()) # value return array
+#
+# for value in capitals.values(): # This is key
 #      print(value)
 
 # capitals.clear()
 # print(capitals)
+
+
+items = capitals.items() # it will returen each key pairs inner array
+print(items)
+
+for key, value in items:
+    print(f"{key}: {value}")
+
+
+
+
+
+
 
