@@ -41,7 +41,7 @@ capitals = {"USA": "Washingtion D.C",
 # print(capitals)
 
 
-items = capitals.items() # it will returen each key pairs inner array
+items = capitals.items() # it will returen each key:value  pairs inner array
 print(items)
 
 for key, value in items:
