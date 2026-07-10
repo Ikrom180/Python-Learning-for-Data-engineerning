@@ -14,8 +14,3 @@ import time
 # # print(net_price(500))
 # # print(net_price(500, 0.1))
 # print(net_price(500, 0.1 , 0))
-
-
-
-def count(start, end):
-    for x in range(start, end):
