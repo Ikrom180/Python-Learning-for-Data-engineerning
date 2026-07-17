@@ -42,7 +42,7 @@
 
 #SET
 
-# fruits = {"apple", "banana", "sherry", "coconut"}
+fruits = {"apple", "banana", "sherry", "coconut"}
 
 # we can`t find values with searching indexes
 # print(fruits)
@@ -55,8 +55,10 @@
 # print(fruits)
 
 # print(fruits[0]) # it will return error
-# for fruit in fruits:
-#     print(fruit)
+# print(fruits(2))
+
+for fruit in fruits:
+    print(fruit)
 
 
 
