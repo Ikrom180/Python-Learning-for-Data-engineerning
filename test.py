@@ -1,0 +1,1 @@
+print('apple'.count("e"))
