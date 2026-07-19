@@ -26,7 +26,7 @@ while attempts > 0 and "_" in hint:
     # Check if letter exists in word
     if guess in answer:
         # Count how many of this letter are in the word
-        total_in_word = answer.count(guess) # ->4
+        total_in_word = answer.count(guess)
         # print(total_in_word) -> harfnib turgan orinidigi indexini oladi
 
 
@@ -41,6 +41,7 @@ while attempts > 0 and "_" in hint:
             if answer[i] == guess and hint[i] == "_":
                 hint[i] = guess
                 guessed[guess] = guessed_count + 1
+                print(guessed)
                 print(f"✅ Correct! Found one '{guess}'")
                 found = True
                 break  # Only fill ONE per guess

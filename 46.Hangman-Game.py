@@ -4,33 +4,6 @@ import random
 
 word = ("apple", "orange", "banana", "coconut", "pineapple")
 
-answer = random.choice(word)
-
-
-def display_hint(hint):
-    print("Hint:", " ".join(hint))
-
-hint = ["_"] * len(answer)
-
-
-# MY version
-is_running = True
-
-while is_running:
-
-
-
-
-    print(answer)
-
-    display_hint(hint)  # You need to define this function
-
-    guess = input("Enter your guess: ").lower()
-
-    if guess in answer:
-        for i in range(len(answer)):
-            if answer[i] == guess:
-                hint[i] = guess
 
 
 
@@ -60,25 +33,35 @@ while is_running:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# def display_hint(hint):
+#     print(f"Hint: {" ".join(hint)} ",)
 #
+#
+# answer = random.choice(word)
+# print(answer)
+# hint = ['_'] * len(answer)
+# guesses = {}
+# is_running = True
+#
+# while is_running:
+#
+#     display_hint(hint)
+#     guess = input("Guess a letter: ")
+#
+#     if guess in answer:
+#         for i in range(len(answer)):
+#             if guess == answer[i] and hint[i] == "_":
+#                 hint[i] = guess
+#                 break
+
+
+# letter da nechta bir xil harf bor tekshirsinde agar usha xarf 1 marttadan kop qaytariolsa chapdan onga oqisini i imenna usha  xarf uchun logikani yasash kere
+
+
+
+
+
+
 # # MY version
 # word = ("apple", "orange", "banana", "coconut", "pineapple")
 #
