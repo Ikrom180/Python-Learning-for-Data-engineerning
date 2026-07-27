@@ -1,6 +1,6 @@
 # variable = A CONTAINTER FOR A  value (string, integer , float, boolen)
 #       A variable behaves as if it was the valjue it contains
-from setuptools.command.build_ext import use_stubs
+# from setuptools.command.build_ext import use_stubs
 
 # String
 name = "Ikrom"
