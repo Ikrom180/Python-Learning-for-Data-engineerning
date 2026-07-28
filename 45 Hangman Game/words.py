@@ -1,0 +1,1 @@
+word = ("apple", "orange", "banana", "coconut", "pineapple", 'ox', 'oxygen', 'fox')
