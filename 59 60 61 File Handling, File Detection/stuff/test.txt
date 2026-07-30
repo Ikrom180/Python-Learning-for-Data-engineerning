@@ -1,1 +1,38 @@
-I like pizza
+# 'w' - WRITE (overwrites everything)
+with open('test.txt', 'w') as f:
+    f.write('New content')  # Old content is GONE!
+
+# 'a' - APPEND (adds to end)
+with open('test.txt', 'a') as f:
+    f.write('Add this to the end')  # Keeps old content
+
+# 'r' - READ
+with open('test.txt', 'r') as f:
+    content = f.read()  # Get all text
+
+# 'x' - EXCLUSIVE CREATE (safety)
+with open('new.txt', 'x') as f:
+    f.write('Only creates if file NOT exists')
+
+# 'r+' - READ AND WRITE
+with open('test.txt', 'r+') as f:
+    content = f.read()    # Can read
+    f.write('New text')   # And write (overwrites from cursor position)
+
+# 'rb' - READ BINARY (for images)
+with open('image.jpg', 'rb') as f:
+    data = f.read()  # Gets bytes, not text
+
+# 'wb' - WRITE BINARY
+with open('image.jpg', 'wb') as f:
+    f.write(binary_data)  # Write bytes
+
+
+
+    # You can combine them:
+'wt'  # Write text (default, just 'w' works)
+'wb'  # Write binary
+'rt'  # Read text (default, just 'r' works)
+'rb'  # Read binary
+'at'  # Append text
+'ab'  # Append binary
