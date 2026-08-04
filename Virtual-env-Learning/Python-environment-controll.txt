@@ -1,0 +1,2 @@
+python -m venv env # -> it will open new env file
+env\Scripts\activate.bat
