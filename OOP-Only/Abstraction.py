@@ -25,3 +25,39 @@ class Car(Vehicle):
 
     def stop(self):
         print('Car is stopping')
+
+
+from abc import ABC, abstractmethod
+
+
+class Animal(ABC):
+    def __init__(self, name):
+        self.name = name
+
+    @abstractmethod
+    def make_sound(self):
+        """Abstract method - must be implemented"""
+        pass
+
+    def sleep(self):
+        """Concrete method - shared across all animals"""
+        return f"{self.name} is sleeping"
+
+    @abstractmethod
+    def move(self):
+        """Another abstract method"""
+        pass
+
+
+class Dog(Animal):
+    def make_sound(self):
+        return "Woof!"
+
+    def move(self):
+        return f"{self.name} runs on 4 legs"
+
+
+# dog = Animal("test")  # ❌ Can't instantiate abstract class
+dog = Dog("Buddy")
+print(dog.make_sound())  # Woof!
+print(dog.sleep())  # Buddy is sleeping
