@@ -1,3 +1,8 @@
+#unittest -> TestCase subclass, setUp, self.assertEqual,
+#   self.assertRaises with manual message extraction
+#pytest -> plain functions, opt-in fixtures, plain assert,
+#    pytest.raises with built-in match, parametrize
+
 import unittest
 
 class Calculator:
