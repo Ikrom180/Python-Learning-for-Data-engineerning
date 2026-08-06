@@ -133,3 +133,35 @@ def test_custom_initial_value() -> None:
     """Creating na Calculator with an initial value of 42 should at 42"""
     calc: Calculator = Calculator(initial_values=42)
     assert calc.value == 42
+
+
+@pytest.mark.parametrize(
+    "initial, operations, expected",
+    [
+        (0, [("add", 10), ("multiply", 3), ("subtract", 5), ("divide", 5)], 5),
+        (0, [("add", 10), ("add", 3), ("add", 5)], 18),
+        (100, [("subtract", 50), ("divide", 2)], 25),
+        (2, [("multiply", 3), ("multiply", 4)], 24)
+    ]
+)
+def test_chain_operations(
+        initial: float,
+        operations: list[tuple[str, float]],
+        expected: float,
+) -> None:
+    """Parametrized test verifying that  chained operations produce the correct final value. """
+    calc: Calculator = Calculator(initial_values=initial)
+
+    for op_name, operand in operations:
+        if op_name == "add":
+            calc.add(operand)
+        elif op_name == "subtract":
+            calc.subtract(operand)
+        elif op_name == "multiply":
+            calc.multiply(operand)
+        elif op_name == "divide":
+            calc.divide(operand)
+
+    assert calc.value == expected
+
+    #run -> pytest filename.py -v
